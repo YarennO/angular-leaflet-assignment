@@ -1,0 +1,26 @@
+<div class="card m-3 " [ngStyle]="{ 'border': selectedSensorData()?.options?.customId === sensorData().id ? '2px solid #007DFC' : 'none' }">
+    <div class="d-flex justify-content-between align-items-center flex-column">
+      <div>
+        <h5>Sıcaklık ve Nem Sensörü</h5>
+        <p>{{sensorData().place }}</p>
+      </div>
+
+
+      <div class="d-flex flex-row align-items-center align-content-center w-100">
+        <img ngSrc="assets/images/temperature_icon.png" width="24" class="me-2" height="31" alt="temperature_icon"/>
+        <h5 class="me-3 ">{{sensorData().temperature}} °C</h5>
+        <img ngSrc="assets/images/moisture_icon.png" width="24" class="me-2" alt="moisture_icon" height="26"/>
+        <h5>% {{sensorData().moisture}}</h5>
+
+      </div>
+
+      <div class="w-100 d-flex justify-content-between align-content-center align-items-center">
+        <p style="font-size: 10px" class="mt-2 fw-bold">{{sensorData().date | date: 'dd/MM/yy hh:mm'}}</p>
+        <button class="custom-button" (click)="setSelectedSensor(sensorData())">
+          <img src="assets/images/action_button.png" alt="Custom Icon" width="32"/>
+        </button>
+      </div>
+
+    </div>
+
+  </div>

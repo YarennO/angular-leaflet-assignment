@@ -1,0 +1,23 @@
+.card {
+    border-radius: 15px;
+    background-color: #F2F9FF;
+    border: none;
+    padding: 15px 20px;
+   // width: 264px;
+  }
+
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-button img {
+  width: 32px;
+
+}
+
